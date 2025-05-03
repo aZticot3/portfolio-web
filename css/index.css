@@ -1,0 +1,74 @@
+header section {
+    order: 2;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header section h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+/* Grille pour les services */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur la ligne suivante */
+    gap: 20px; /* Espace entre les services */
+}
+
+/* Ajustements pour centrer le contenu de chaque service-item */
+main article {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+
+    display: flex; /* Flexbox pour centrer le contenu */
+    flex-direction: column; /* S'assurer que le contenu reste en colonne (h3 puis p) */
+    justify-content: center; /* Centrer verticalement le contenu */
+    height: 150px; /* Ajout d'une hauteur fixe pour uniformiser la taille des cartes */
+}
+
+/* Style pour les paragraphes (mettre en italique) */
+main article p {
+    font-style: italic;
+}
+
+/* Couleurs différentes pour chaque service */
+main article:nth-child(1) {
+    background-color: #C0D6FF; /* Développement Web */
+}
+
+main article:nth-child(2) {
+    background-color: #FADADD; /* Développement Backend & Programmation */
+}
+
+main article:nth-child(3) {
+    background-color: #FFFACD; /* Bases de Données & SQL */
+}
+
+main article:nth-child(4) {
+    background-color: #C1FFBF; /* Modélisations 3D */
+}
+
+main article:nth-child(5) {
+    background-color: #D3D3D3; /* Automatisation & Scripts */
+}
+
+/* Ajustements des effets de survol pour les services */
+main article:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre au survol */
+    transform: translateY(-5px); /* Effet de levage au survol */
+}
+
+main article h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}

@@ -1,0 +1,134 @@
+header section {
+    order: 2;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header section nav{
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 100%;
+}
+
+
+header section nav form{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: center;
+    
+}
+  
+header section nav button {
+
+    padding: 0.5rem 1rem;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: background-color 0.2s;
+}
+  
+header section nav button:hover {
+    background-color: #bbb;
+}
+
+main {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+  
+main article {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    /*box-shadow: 0 2x 5px rgba(0,0,0,0.1);*/
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+
+main article section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 70%;
+}
+
+main article aside {
+    height: 100%;
+    width: 30%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-word;       /* Permet de couper si un mot est trop long */
+    white-space: normal;          /* Permet les retours à la ligne */
+    padding-right: 0.5em;
+    line-height: 1.4;   
+}
+
+header form {
+    margin: 0;
+}
+
+
+#load-more {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color:#ededed;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    font-weight:bold;
+    padding:12px 33px;
+    margin: 1em;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+
+#load-more:hover {
+background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+background-color:#dfdfdf;
+}
+
+
+
+/* Pour les tablettes */
+@media screen and (max-width: 992px) {
+    header section nav form{
+        justify-content: flex-start;
+    }
+    main article aside {
+        padding-right: 0.2em;
+    }
+}
+  
+/* Pour les smartphones larges */
+@media screen and (max-width: 422px) {
+
+    main article {
+        min-width: 250px;
+    }
+
+    main article aside {
+        padding-right: 0.1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        font-size: 12px;
+    }
+}
